@@ -273,21 +273,28 @@ ul{
     display: flex;
     color: var(--text-black-900);
 }
+#home{
+    background-image: url(img/founder-back.jpg);
+    background-repeat: no-repeat;
+    background-size: 60rem auto;
+}
 .home .home-info{
     flex: 0 0 60%;
     max-width: 60%;
+    padding-left: 10rem;
 }
 h3.hello{
-    font-size: 28px;
+    font-size: 45px;
     margin: 15px 0;
 }
 h3.hello span{
     font-family: 'Clicker Script',cursive;
-    font-size: 30px;
+    font-size: 47px;
     font-weight: 700;
     color: var(--skin-color);
-}h3.my-profession{
-    font-size: 30px;
+}
+h3.my-profession{
+    font-size: 35px;
     margin: 15px 0;
 }
 .typing{
@@ -298,18 +305,23 @@ h3.hello span{
     font-size: 20px;
     color: var(--text-black-700);
 }
+/* .home-info .hire-me{
+    float: middle;
+} */
 .home .home-img{
     flex: 0 0 40%;
     max-width: 40%;
     text-align: center;
-    position: relative;
-    
+    position: relative; 
 }
 .home .home-img img{
-    height: 450px;
-    margin: auto;
-    border-radius: 5px;
+    /* height: 450px;
+    margin: auto; */
+    /* border-radius: 5px; */
     position: relative;
+    box-shadow: (0 0.5rem 1rem rgba(0,0,0,0.3));
+    border-radius: 2rem;
+    width: 30rem;
 }
 /* About */
 .about .about-content{
@@ -410,10 +422,10 @@ h3.hello span{
     font-weight: 400;
     line-height: 40px;
 }
-.about .about-content .education,
-.about .about-content .experience{
-    flex: 0 0 50%;
-    max-width: 50%;
+.about .about-content .education{
+/* .about .about-content .experience{ */
+    flex: 0 0 100%;
+    max-width: 100%;
     margin-top: 30px;
 }
 .about .about-content h3.title{
@@ -515,6 +527,7 @@ h3.hello span{
     display: block;
     transition: 0.5s;
     height: 400px;
+    opacity: 0.8;
 }
 .Projects{
     position: relative;
@@ -736,12 +749,18 @@ footer .copyright-text{
     }
 }
 @media (max-width:900px){
+    
     .home .home-img img{
         /* top: 20%; */
         right: 20%;
         height: 400px;
     }
 }
+/* @media (max-width:817px){
+    .home .home-info{
+        padding-left: 15px;
+    } 
+} */
 @media (max-width:767px){
     .home .home-info,
     .home-img,
@@ -754,6 +773,9 @@ footer .copyright-text{
     .contact .contact-form .col-6{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .home .home-info{
+        padding-left: 15px;
     }
     .home-img{
         margin: auto;
@@ -776,14 +798,25 @@ footer .copyright-text{
  @media (max-width:600px){
     .home .home-img img{
         right: 130px;
+        bottom: 50px;
+    }
+    .home .home-info p{
+        display: none;
+    }
+    #home{
+        background-size: 50rem auto;
     }
 }
 @media (max-width:500px){
+   
     .home .home-img img{
         right: 150px;
     }
 }
 @media (max-width:420px){
+    #home{
+        background-size: 40rem auto;
+    }
     .home .home-img img{
         height: 450px;
     }
