@@ -704,7 +704,7 @@ footer .copyright-text{
     color: var(--text-black-700);
     font-weight: 900;
 }
-/* responsive */
+/************************ responsive ***************************/
 @media (max-width:1199px){
     .section .container{
         padding-top: 70px;

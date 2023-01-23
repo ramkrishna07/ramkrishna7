@@ -27,6 +27,7 @@ const nav=document.querySelector(".nav"),
               showSection(this);
               if(window.innerWidth<1200){
                   asideSectionTogglerBtn();
+                  
               }
           })
          
@@ -50,6 +51,7 @@ const nav=document.querySelector(".nav"),
       }
 
 
+
       function updateNav(element){
          for(let i=0;i<totalNavList;i++){
              navList[i].querySelector("a").classList.remove("active");
@@ -60,6 +62,7 @@ const nav=document.querySelector(".nav"),
          }
       }
 
+      // hire me button
       document.querySelector(".hire-me").addEventListener("click",function(){
           const sectionIndex=this.getAttribute("data-section-index");
           showSection(this);
@@ -67,6 +70,8 @@ const nav=document.querySelector(".nav"),
           removeBackSection();
           addBackSection(sectionIndex);
       })
+
+      // navigation toggler button
     const navTogglerBtn=document.querySelector(".nav-toggler"),
           aside=document.querySelector(".aside");
           navTogglerBtn.addEventListener("click",()=>
