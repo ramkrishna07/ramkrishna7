@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Clicker+Script&family=Montserrat:ital@1&family=Poppins:wght@200;300;400;600;700&family=Roboto:ital,wght@0,400;1,300&display=swap');
-
+#preloader{
+    background: rgb(22, 21, 26) url(../img/giphy.gif) no-repeat center center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
 :root{
     --bg-black-900:#151515;
     --bg-black-100:#222222;
@@ -121,21 +128,45 @@ ul{
     margin-right: -15px;
     position: relative;
 }
-.btn{
-    font-size: 16px;
-    font-weight: 500;
-    padding: 12px 35px;
-    color: white;
-    border-radius: 40px;
-    display: inline-block;
-    white-space: nowrap;
-    border: none;
-    background: var(--skin-color);
-    transition: all 0.3s ease;
+
+
+.btn {
+  position: relative;
+  border-radius: 40px;
+  background: var(--skin-color);
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin: 36px;
+  /* box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7); */
+  display: inline-block;
+  white-space: nowrap;
+  border: none;
 }
+.btn:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+}
+  
 .btn:hover{
-    transform: scale(1.05);
+    padding-right: 30px;
+    padding-left:20px;
 }
+  
+.btn:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
 .shadow-dark{
     box-shadow: 0 0 20px rgba(48,46,77,0.15);
 }
@@ -254,6 +285,7 @@ ul{
     display: block;
 }
 .aside .nav li a{
+    position: relative;
     font-size: 16px;
     font-weight: 600;
     display: block;
@@ -261,6 +293,61 @@ ul{
     color: var(--text-black-900);
     padding: 5px 15px;
 }
+.aside .nav li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    content: '';
+    color: var(--bg-black-50);
+    background: #aaa;
+    height: .1px;
+}
+  
+.aside .nav li a:after {
+    text-align: left;
+    content: '';
+    margin: 0;
+    opacity: 0;
+  }
+.aside .nav li a:hover {
+    color: grey;
+    z-index: 1;
+    font-size: 14px;
+  }
+.aside .nav li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 0.6s forwards;
+    -moz-animation: fill 0.6s forwards;
+    opacity: 1;
+  }
+.aside .nav li a,
+.aside .nav li a:after,
+.aside .nav li a:before {
+  transition: all .5s;
+}
+@-webkit-keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 115%;
+      background: #fff;
+    }
+  }
+/* .aside .nav li a:hover:after {
+    width: 0%;
+} */
+
 .aside .nav li a.active{
     color: var(--skin-color);
 }
@@ -672,6 +759,10 @@ h3.my-profession{
 .contact .contact-form .btn{
     height: 50px;
     padding: 0 50px;
+}
+.contact .contact-form .btn:hover{
+    height: 50px;
+    padding: 0 30px;
 }
 .alert{
     width: 100%;

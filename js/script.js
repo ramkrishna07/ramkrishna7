@@ -5,6 +5,12 @@ var typed=new Typed(".typing",{
     BackSpeed:60,
     loop:true
 })
+/* preloader */
+var loader=document.getElementById('preloader');
+    window.addEventListener('load',function(){
+        loader.style.display='none';
+    })
+
 /* aside */
 const nav=document.querySelector(".nav"),
       navList=nav.querySelectorAll("li"),
