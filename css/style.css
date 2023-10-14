@@ -602,6 +602,7 @@ h3.my-profession{
     flex: 0 0 33.33%;
     max-width: 33.33%;
     margin-bottom: 30px;
+    
 }
 .portfolio .portfolio-item-inner{
     border: 6px solid var(--bg-black-100);
@@ -613,7 +614,7 @@ h3.my-profession{
     width: 100%;
     display: block;
     transition: 0.5s;
-    height: 400px;
+    height: 100%;
     opacity: 0.8;
 }
 .Projects{
